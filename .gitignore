@@ -1,0 +1,9 @@
+node_modules/
+public/components
+.nyc_output
+.sass-cache
+.idea/
+dist/
+coverage/
+package-lock.json
+**/.DS_Store
