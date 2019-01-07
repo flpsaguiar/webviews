@@ -18,13 +18,13 @@ class AcoesController {
             return $(elem).text();
         }).toArray();
 
-        console.log(data);
-
-        data.map((number) => {
-            return number.replace(',', '.');
-        });
+        const name = $('div.box-table-cell h2').text();
+        $('span').remove();
+        const ticket = $('div.emp-nome h1').text();
 
         return res.json({
+            name,
+            ticket,
             min: data[0],
             max: data[1],
             abertura: data[2],
