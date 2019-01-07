@@ -1,0 +1,52 @@
+<div id="action">
+	<a ui-sref="search" class="back">
+		Voltar
+	</a>
+	<div id="data-tables" class="clearfix">
+		<div class="row">
+			<div class="title">COTAÇÃO PETROBRAS PN</div>
+		</div>
+		<div class="row">
+			<div class="col col-left">
+			<table>
+					<tr>
+						<td>MIN.</td>
+						<td>{{vm.stockData.min}}</td>
+					</tr>
+					<tr>
+						<td>MÁX.</td>
+						<td>{{vm.stockData.max}}</td>
+					</tr>
+					<tr>
+						<td>ABERT.</td>
+						<td>{{vm.stockData.abertura}}</td>
+					</tr>
+					<tr>
+						<td>FECH.</td>
+						<td>{{vm.stockData.fechamento}}</td>
+					</tr>
+				</table>
+		</div>
+		<div class="col col-right">
+			<table>
+					<tr>
+						<td>DIA</td>
+						<td>{{vm.stockData.dia}}</td>
+					</tr>
+					<tr>
+						<td>SEMANA</td>
+						<td>{{vm.stockData.semana}}</td>
+					</tr>
+					<tr>
+						<td>MÊS</td>
+						<td>{{vm.stockData.mes}}</td>
+					</tr>
+					<tr>
+						<td>ANO</td>
+						<td>{{vm.stockData.ano}}</td>
+					</tr>
+				</table>
+		</div>
+		</div>
+	</div>
+</div>

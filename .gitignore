@@ -3,7 +3,7 @@ public/components
 .nyc_output
 .sass-cache
 .idea/
-dist/
+/dist/
 coverage/
 package-lock.json
 **/.DS_Store

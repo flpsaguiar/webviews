@@ -4,12 +4,18 @@ const compress = require('compression');
 const path = require('path');
 const glob = require('glob');
 const rootPath = path.normalize(`${__dirname}/..`);
+const express = require('express');
 
 class Setup {
 
     static load(app) {
         Setup.loadBodyParser(app);
         Setup.loadControllers(app);
+        Setup.serveStatic(app);
+    }
+
+    static serveStatic(app) {
+        app.use('/', express.static(path.join(__dirname, '../public/dist')));
     }
 
     static loadBodyParser(app) {
