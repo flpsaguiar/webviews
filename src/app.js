@@ -1,9 +1,11 @@
 const express = require('express');
 const setup = require('./setup');
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 setup.load(app);
 
-app.listen(process.env.PORT || 5000, () => {
-    console.log('Express server listening on port 3000');
+app.listen(PORT, () => {
+    console.log(`Express server listening on port ${PORT}`);
 });
