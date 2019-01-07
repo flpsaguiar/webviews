@@ -14,7 +14,7 @@ class AcoesController {
         const body = await request(options);
         const $ = cheerio.load(body);
 
-        const data = $('table.table td').map((i, elem) => {
+        let data = $('table.table td').map((i, elem) => {
             return $(elem).text();
         }).toArray();
 
@@ -22,7 +22,11 @@ class AcoesController {
         $('span').remove();
         const ticket = $('div.emp-nome h1').text();
 
-        const preco = $('div.preco').text().trim();
+        const preco = Number($('div.preco').text().trim().replace(',', '.'));
+
+        data = data.map((number) => {
+            return Number(number.replace(',', '.').replace('%', ''));
+        });
 
         return res.json({
             name,
