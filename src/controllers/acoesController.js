@@ -22,9 +22,12 @@ class AcoesController {
         $('span').remove();
         const ticket = $('div.emp-nome h1').text();
 
+        const preco = $('div.preco').text();
+
         return res.json({
             name,
             ticket,
+            preco,
             min: data[0],
             max: data[1],
             abertura: data[2],
