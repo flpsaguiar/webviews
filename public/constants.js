@@ -1,5 +1,3 @@
-// TODO ALTERAR URL
-
 const config = {
 	production: {
 		API: 'https://webviews-test.herokuapp.com',
