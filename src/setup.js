@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const compress = require('compression');
 const path = require('path');
 const glob = require('glob');
+const cors = require('cors');
 const rootPath = path.normalize(`${__dirname}/..`);
 const express = require('express');
 
@@ -10,8 +11,13 @@ class Setup {
 
     static load(app) {
         Setup.loadBodyParser(app);
+        Setup.addCors(app);
         Setup.loadControllers(app);
         Setup.serveStatic(app);
+    }
+
+    static addCors(app) {
+        app.use(cors());
     }
 
     static serveStatic(app) {
