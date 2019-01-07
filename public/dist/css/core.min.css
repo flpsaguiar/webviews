@@ -13,7 +13,7 @@ body {
   font-family: Arial;
 }
 
-#action .back {
+#stock .back {
   color: #fff;
   position: absolute;
   top: 15px;
@@ -22,11 +22,35 @@ body {
   text-decoration: none;
 }
 
-#action .back:hover {
+#stock .back:hover {
   text-decoration: underline;
 }
 
-#action #data-tables {
+#stock #ticket {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#stock .prices {
+  margin-bottom: 20px;
+}
+
+#stock .prices h2 {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+#stock .prices .current-price {
+  text-align: left;
+}
+
+#stock .prices .variation-percent {
+  text-align: right;
+  border-right: 1px solid #fff;
+}
+
+#stock #data-tables {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -37,7 +61,7 @@ body {
 }
 
 @media all and (max-width: 500px) and (max-height: 600px), all and (max-height: 400px) {
-  #action #data-tables {
+  #stock #data-tables {
     position: relative;
     top: initial;
     left: initial;
@@ -46,34 +70,34 @@ body {
   }
 }
 
-#action table td,
-#action table th {
+#stock table td,
+#stock table th {
   padding: 18px 25px;
 }
 
-#action table thead th {
+#stock table thead th {
   padding-bottom: 25px;
   border-bottom: 1px solid #fff;
 }
 
-#action table tbody tr:nth-child(1) td {
+#stock table tbody tr:nth-child(1) td {
   padding-top: 25px;
 }
 
-#action table tbody tr td:nth-child(1) {
+#stock table tbody tr td:nth-child(1) {
   font-weight: bold;
 }
 
-#action table tbody tr td:nth-child(2) {
+#stock table tbody tr td:nth-child(2) {
   padding-right: 50px;
 }
 
-#action table tbody tr td:nth-child(3) {
+#stock table tbody tr td:nth-child(3) {
   padding-left: 50px;
   font-weight: bold;
 }
 
-#action .title {
+#stock .title {
   padding: 10px 10px 30px;
   margin-bottom: 10px;
   text-align: center;
@@ -83,52 +107,52 @@ body {
   width: 100%;
 }
 
-#action .clearfix:before,
-#action .clearfix:after,
-#action .row:before,
-#action .row:after,
-#action .col:before,
-#action .col:after {
+#stock .clearfix:before,
+#stock .clearfix:after,
+#stock .row:before,
+#stock .row:after,
+#stock .col:before,
+#stock .col:after {
   content: "";
   display: block;
   clear: both;
 }
 
-#action .row {
+#stock .row {
   width: 100%;
   float: left;
 }
 
-#action .col {
+#stock .col {
   float: left;
   width: 50%;
 }
 
-#action .col-left table {
+#stock .col-left table {
   float: right;
   padding-right: 20px;
 }
 
-#action .col-right table {
+#stock .col-right table {
   float: left;
   padding-left: 20px;
 }
 
 @media all and (max-width: 500px) {
-  #action .col {
+  #stock .col {
     width: 100%;
   }
-  #action .col-left table,
-  #action .col-right table {
+  #stock .col-left table,
+  #stock .col-right table {
     float: initial;
     padding: 0;
     margin: 0 auto;
     width: 100%;
   }
-  #action .col-left table {
+  #stock .col-left table {
     margin-bottom: 40px;
   }
-  #action .col table tr td:nth-child(2) {
+  #stock .col table tr td:nth-child(2) {
     text-align: right;
   }
 }

@@ -1,4 +1,4 @@
-#action {
+#stock {
 	.back {
 		color: #fff;
 		position: absolute;
@@ -9,6 +9,30 @@
 
 		&:hover {
 			text-decoration: underline;
+		}
+	}
+
+	#ticket {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.prices {
+		margin-bottom: 20px;
+
+		h2 {
+			float: left;
+			width: 50%;
+			padding: 0 15px;
+		}
+
+		.current-price {
+			text-align: left;
+		}
+
+		.variation-percent {
+			text-align: right;
+			border-right: 1px solid #fff;
 		}
 	}
 
