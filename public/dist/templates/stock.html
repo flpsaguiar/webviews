@@ -1,9 +1,16 @@
-<div id="action">
+<div id="stock">
 	<a ui-sref="search" class="back">
 		Voltar
 	</a>
 	<div id="data-tables" class="clearfix">
 		<div class="row">
+			<h1 id="ticket">{{vm.stockData.ticket}}</h1>
+
+			<div class="prices clearfix">
+				<h2 class="variation-percent">{{vm.stockData.dia}}</h2>
+				<h2 class="current-price">R$ {{vm.stockData.preco}}</h2>
+			</div>
+
 			<div class="title">{{vm.stockData.name}}</div>
 		</div>
 		<div class="row">
