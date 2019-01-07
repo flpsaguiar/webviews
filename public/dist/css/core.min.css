@@ -13,6 +13,33 @@ body {
   font-family: Arial;
 }
 
+.down {
+  color: #f66;
+}
+
+.down-bg {
+  background: #f66;
+}
+
+.up {
+  color: #6f6;
+}
+
+.up-bg {
+  background: #6f6;
+}
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after,
+.col:before,
+.col:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 #stock .back {
   color: #fff;
   position: absolute;
@@ -26,18 +53,27 @@ body {
   text-decoration: underline;
 }
 
+#stock .loading {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
 #stock #ticket {
   text-align: center;
   margin-bottom: 20px;
 }
 
 #stock .prices {
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  text-align: center;
 }
 
 #stock .prices h2 {
-  float: left;
-  width: 50%;
+  display: inline-block;
   padding: 0 15px;
 }
 
@@ -60,7 +96,7 @@ body {
   display: block;
 }
 
-@media all and (max-width: 500px) and (max-height: 600px), all and (max-height: 400px) {
+@media all and (max-width: 500px) and (max-height: 700px), all and (max-height: 400px) {
   #stock #data-tables {
     position: relative;
     top: initial;
@@ -107,17 +143,6 @@ body {
   width: 100%;
 }
 
-#stock .clearfix:before,
-#stock .clearfix:after,
-#stock .row:before,
-#stock .row:after,
-#stock .col:before,
-#stock .col:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 #stock .row {
   width: 100%;
   float: left;
@@ -157,14 +182,12 @@ body {
   }
 }
 
-#search {
-  padding: 20px 0 20px;
-}
-
 #search form {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 200px;
+  max-width: 90%;
   transform: translate(-50%, -50%);
 }
 
@@ -201,11 +224,4 @@ body {
   text-align: center;
   font-size: 25px;
   margin-bottom: 10px;
-}
-
-@font-face {
-  font-family: undefeated;
-  src: url("../fonts/undefeated.ttf");
-  font-weight: normal;
-  font-style: normal;
 }

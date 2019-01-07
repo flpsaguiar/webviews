@@ -9,3 +9,30 @@ body {
 	color: #fff;
 	font-family: Arial;
 }
+
+.down {
+	color: #f66;
+}
+
+.down-bg {
+	background: #f66;
+}
+
+.up {
+	color: #6f6;
+}
+
+.up-bg {
+	background: #6f6;
+}
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after,
+.col:before,
+.col:after{
+	content: "";
+	display: block;
+	clear: both;
+}

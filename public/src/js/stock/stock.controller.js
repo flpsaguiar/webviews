@@ -16,7 +16,7 @@
 		console.log('init StockController >>>>');
 
 		///////////// Public Properties
-		vm.stockData = {};
+		vm.stockData = null;
 
 		///////////// Private Properties
 

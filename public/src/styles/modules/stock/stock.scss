@@ -12,17 +12,26 @@
 		}
 	}
 
+	.loading {
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 18px;
+	}
+
 	#ticket {
 		text-align: center;
 		margin-bottom: 20px;
 	}
 
 	.prices {
-		margin-bottom: 20px;
+		margin: 0 auto 20px;
+		text-align: center;
 
 		h2 {
-			float: left;
-			width: 50%;
+			display: inline-block;
 			padding: 0 15px;
 		}
 
@@ -46,7 +55,7 @@
 		padding: 20px;
 		display: block;
 
-		@media all and (max-width: 500px) and (max-height: 600px), all and (max-height: 400px) {
+		@media all and (max-width: 500px) and (max-height: 700px), all and (max-height: 400px) {
 			position: relative;
 			top: initial;
 			left: initial;
@@ -91,17 +100,6 @@
 		border-bottom: 1px solid #fff;
 		display: block;
 		width: 100%;
-	}
-
-	.clearfix:before,
-	.clearfix:after,
-	.row:before,
-	.row:after,
-	.col:before,
-	.col:after{
-		content: "";
-		display: block;
-		clear: both;
 	}
 
 	.row {

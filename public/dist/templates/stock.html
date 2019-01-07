@@ -2,13 +2,33 @@
 	<a ui-sref="search" class="back">
 		Voltar
 	</a>
-	<div id="data-tables" class="clearfix">
+
+	<div class="loading" ng-if="!vm.stockData">
+		<h1>Carregando...</h1>
+	</div>
+
+	<div
+		id="data-tables"
+		class="clearfix"
+		ng-if="vm.stockData">
 		<div class="row">
 			<h1 id="ticket">{{vm.stockData.ticket}}</h1>
 
 			<div class="prices clearfix">
-				<h2 class="variation-percent">{{vm.stockData.dia}}</h2>
-				<h2 class="current-price">R$ {{vm.stockData.preco}}</h2>
+				<h2
+					class="variation-percent"
+					ng-class="{
+						'down': vm.stockData.dia.value < 0,
+						'up': vm.stockData.dia.value > 0
+					}">
+					<i
+						class="fas"
+						ng-class="{
+							'fa-arrow-down': vm.stockData.dia.value < 0,
+							'fa-arrow-up': vm.stockData.dia.value > 0
+						}"></i>
+					{{vm.stockData.dia.presentation}}%</h2>
+				<h2 class="current-price">R$ {{vm.stockData.preco.presentation}}</h2>
 			</div>
 
 			<div class="title">{{vm.stockData.name}}</div>
@@ -18,19 +38,19 @@
 			<table>
 					<tr>
 						<td>MIN.</td>
-						<td>{{vm.stockData.min}}</td>
+						<td>{{vm.stockData.min.presentation}}</td>
 					</tr>
 					<tr>
 						<td>MÁX.</td>
-						<td>{{vm.stockData.max}}</td>
+						<td>{{vm.stockData.max.presentation}}</td>
 					</tr>
 					<tr>
 						<td>ABERT.</td>
-						<td>{{vm.stockData.abertura}}</td>
+						<td>{{vm.stockData.abertura.presentation}}</td>
 					</tr>
 					<tr>
 						<td>FECH.</td>
-						<td>{{vm.stockData.fechamento}}</td>
+						<td>{{vm.stockData.fechamento.presentation}}</td>
 					</tr>
 				</table>
 		</div>
@@ -38,19 +58,63 @@
 			<table>
 					<tr>
 						<td>DIA</td>
-						<td>{{vm.stockData.dia}}</td>
+						<td ng-class="{
+							'down': vm.stockData.dia.value < 0,
+							'up': vm.stockData.dia.value > 0
+						}">
+							{{vm.stockData.dia.presentation}}%
+							<i
+								class="fas"
+								ng-class="{
+									'fa-arrow-down': vm.stockData.dia.value < 0,
+									'fa-arrow-up': vm.stockData.dia.value > 0
+								}"></i>
+						</td>
 					</tr>
 					<tr>
 						<td>SEMANA</td>
-						<td>{{vm.stockData.semana}}</td>
+						<td  ng-class="{
+							'down': vm.stockData.semana.value < 0,
+							'up': vm.stockData.semana.value > 0
+						}">
+							{{vm.stockData.semana.presentation}}%
+							<i
+								class="fas"
+								ng-class="{
+									'fa-arrow-down': vm.stockData.semana.value < 0,
+									'fa-arrow-up': vm.stockData.semana.value > 0
+								}"></i>
+						</td>
 					</tr>
 					<tr>
 						<td>MÊS</td>
-						<td>{{vm.stockData.mes}}</td>
+						<td  ng-class="{
+							'down': vm.stockData.mes.value < 0,
+							'up': vm.stockData.mes.value > 0
+						}">
+							{{vm.stockData.mes.presentation}}%
+							<i
+								class="fas"
+								ng-class="{
+									'fa-arrow-down': vm.stockData.mes.value < 0,
+									'fa-arrow-up': vm.stockData.mes.value > 0
+								}"></i>
+						</td>
 					</tr>
 					<tr>
 						<td>ANO</td>
-						<td>{{vm.stockData.ano}}</td>
+						<td  ng-class="{
+							'down': vm.stockData.ano.value < 0,
+							'up': vm.stockData.ano.value > 0
+						}">
+							{{vm.stockData.ano.presentation}}%
+							<i
+								class="fas"
+								ng-class="{
+									'fa-arrow-down': vm.stockData.ano.value < 0,
+									'fa-arrow-up': vm.stockData.ano.value > 0
+								}"></i>
+						</td>
 					</tr>
 				</table>
 		</div>
