@@ -96,6 +96,29 @@ body {
   display: block;
 }
 
+#stock #data-tables table {
+  width: 260px;
+  max-width: 100%;
+}
+
+#stock #data-tables table td,
+#stock #data-tables table th {
+  padding: 14px 10px;
+}
+
+#stock #data-tables table thead th {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #fff;
+}
+
+#stock #data-tables table tbody tr td:nth-child(1) {
+  font-weight: bold;
+}
+
+#stock #data-tables table tbody tr td:nth-child(2) {
+  text-align: right;
+}
+
 @media all and (max-width: 500px) and (max-height: 700px), all and (max-height: 400px) {
   #stock #data-tables {
     position: relative;
@@ -106,38 +129,12 @@ body {
   }
 }
 
-#stock table td,
-#stock table th {
-  padding: 18px 25px;
-}
-
-#stock table thead th {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #fff;
-}
-
-#stock table tbody tr:nth-child(1) td {
-  padding-top: 25px;
-}
-
-#stock table tbody tr td:nth-child(1) {
-  font-weight: bold;
-}
-
-#stock table tbody tr td:nth-child(2) {
-  padding-right: 50px;
-}
-
-#stock table tbody tr td:nth-child(3) {
-  padding-left: 50px;
-  font-weight: bold;
-}
-
 #stock .title {
   padding: 10px 10px 30px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   text-align: center;
   font-weight: bold;
+  font-size: 18px;
   border-bottom: 1px solid #fff;
   display: block;
   width: 100%;
@@ -155,15 +152,15 @@ body {
 
 #stock .col-left table {
   float: right;
-  padding-right: 20px;
+  padding-right: 25px;
 }
 
 #stock .col-right table {
   float: left;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 570px) {
   #stock .col {
     width: 100%;
   }
